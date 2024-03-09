@@ -14,6 +14,9 @@
 # limitations under the License.
 #
 
+TARGET_KERNEL_DIR ?= device/google/pantah-kernel
+TARGET_BOARD_KERNEL_HEADERS := device/google/pantah-kernel/kernel-headers
+
 $(call inherit-product-if-exists, vendor/google_devices/pantah/prebuilts/device-vendor-cheetah.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs201/prebuilts/device-vendor.mk)
 $(call inherit-product-if-exists, vendor/google_devices/gs201/proprietary/device-vendor.mk)
@@ -307,7 +310,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 
 # Increment the SVN for any official public releases
 PRODUCT_VENDOR_PROPERTIES += \
-    ro.vendor.build.svn=41
+    ro.vendor.build.svn=43
 
 # DCK properties based on target
 PRODUCT_PROPERTY_OVERRIDES += \
